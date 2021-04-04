@@ -1,0 +1,491 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item p {
+  background-color: rgba(255, 255, 255, 0.39);
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item1 {
+  background-color: #1ABC9C;
+}
+
+.item2 {
+  background-color: #3498DB;
+}
+
+.item3 {
+  background-color: #9B59B6;
+}
+
+.item4 {
+  background-color: #E67E22;
+}
+
+.item5 {
+  background-color: #E74C3C;
+}
+
+.item6 {
+  background-color: #1ABC9C;
+}
+
+.item7 {
+  background-color: #3498DB;
+}
+
+.item8 {
+  background-color: #9B59B6;
+}
+
+.item9 {
+  background-color: #E67E22;
+}
+
+
+
+/***********************************/
+/* *********** EX 1.1 ************ */
+/***********************************/
+
+.container1:before {
+  content: "Ex 1.1";
+  position: absolute;
+  top: -20px;
+  left: 45%;
+}
+
+.container1 {
+  width: 60%;
+  max-width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 30px;
+  position: relative;
+  display: flex;
+}
+
+.container1>.item {
+  width: 100%;
+}
+
+/***********************************/
+/* *********** EX 1.2 ************ */
+/***********************************/
+
+.container2:before {
+  content: "Ex 1.2";
+  position: absolute;
+  top: -20px;
+  left: 45%;
+}
+
+.container2 {
+  width: 60%;
+  max-width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 30px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container2>.item {
+  width: 25%;
+}
+
+/***********************************/
+/* *********** EX 1.3 ************ */
+/***********************************/
+
+.container3:before {
+  content: "Ex 1.3";
+  position: absolute;
+  top: -20px;
+  left: 45%;
+}
+
+.container3 {
+  width: 60%;
+  max-width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 30px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container3>.item {
+  width: calc(25% - 10px);
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/***********************************/
+/* *********** EX 2.1 ************ */
+/***********************************/
+
+.box4 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(214, 214, 214);
+}
+
+.box4:before {
+  content: "Ex 2.1 avec BreakPoint du Width à 1024px et 600px de large";
+  position: absolute;
+  top: 10px;
+}
+
+.container4 {
+  background-color: white;
+  width: 60%;
+  height: 500px;
+  border: 1px solid black;
+  margin: 30px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container4 .item {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container4 .item1,
+.container4 .item2,
+.container4 .item3,
+.container4 .item4,
+.container4 .item6,
+.container4 .item7,
+.container4 .item8,
+.container4 .item9 {
+  width: calc(25% - 10px);
+}
+
+.container4 .item5 {
+  width: 100%;
+}
+
+/***********************************/
+/* *********** EX 2.2 ************ */
+/***********************************/
+
+@media screen and (max-width: 1024px) {
+  .container4 {
+    width: 40%;
+  }
+
+  .box4:before {
+    content: "Ex 2.2 Breakpoint à 1024px";
+  }
+
+  .container4 .item1,
+  .container4 .item2,
+  .container4 .item3,
+  .container4 .item4,
+  .container4 .item6,
+  .container4 .item7,
+  .container4 .item8,
+  .container4 .item9 {
+    width: calc(50% - 10px);
+  }
+
+}
+
+/***********************************/
+/* *********** EX 2.3 ************ */
+/***********************************/
+
+@media screen and (max-width: 600px) {
+  .container4 {
+    width: 20%;
+    height: 500px;
+    overflow: hidden;
+  }
+
+  .box4:before {
+    content: "Ex 2.3 Breakpoint à 600px";
+  }
+
+  .container4 .item {
+    width: 100%;
+    height: 89.5px;
+  }
+}
+
+/***********************************/
+/* ************ EX 3 ************* */
+/***********************************/
+
+
+.container5 {
+  width: 60%;
+  max-width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container5:before {
+  content: "ex 3";
+  position: absolute;
+  top: -20px
+}
+
+.container5 .item {
+  width: 110px;
+  height: 110px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/***********************************/
+/* *********** EX 4.1 ************ */
+/***********************************/
+
+.container6 {
+  width: 60%;
+  max-width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.container6:before {
+  content: "ex 4";
+  position: absolute;
+  top: -20px
+}
+
+.container6 .item {
+  width: 100px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container6 .item1,
+.container6 .item2,
+.container6 .item3,
+.container6 .item4,
+.container6 .item5,
+.container6 .item6,
+.container6 .item7,
+.container6 .item8 {
+  height: calc(25% - 10px);
+}
+
+.container6 .item9 {
+  height: 100%;
+}
+
+
+/***********************************/
+/* *********** EX 5.1 ************ */
+/***********************************/
+
+.box7 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(214, 214, 214);
+}
+
+.box7:before {
+  content: "Ex 2.1 avec BreakPoint à 600px de large";
+  position: absolute;
+  top: 10px;
+}
+
+.container7 {
+  background-color: white;
+  width: 60%;
+  height: 300px;
+  border: 1px solid black;
+  margin: 30px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.container7 .item {
+  width: 100%;
+  color: white;
+  padding: 10px 0 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.container7 .item:hover {
+  padding: 20px 0 20px 0;
+  margin-top: 0;
+}
+
+/***********************************/
+/* *********** EX 5.2 ************ */
+/***********************************/
+
+@media screen and (max-width: 600px) {
+  .box7:before {
+    content: "Ex 2.2 Breakpoint à 600px";
+  }
+
+  .container7 {
+    width: 30%;
+    height: 300px;
+    border: 1px solid black;
+    margin: 30px;
+    flex-direction: column;
+  }
+
+  .container7 .item {
+    margin: 0;
+    height: 100%;
+  }
+}
+
+/***********************************/
+/* *********** EX 6.1 ************ */
+/***********************************/
+
+.box8 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(170, 170, 170);
+}
+
+.box8:before {
+  content: "Ex 6.1 avec BreakPoint à 600px de large";
+  position: absolute;
+  top: 10px;
+}
+
+.container8 {
+  background-color: white;
+  width: 60%;
+  height: 50vw;
+  border: 1px solid black;
+  margin: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.container8 .header {
+  height: 10%;
+  background: #1ABC9C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container8 .main {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.container8 .main .navbar {
+  width: 50%;
+  max-width: 200px;
+  padding: 10px;
+  background: #3498DB;
+}
+
+.container8 .main .navbar li {
+  padding: 10px 0;
+  border-bottom: 1px solid white;
+}
+
+.container8 .main .article {
+  background: #9B59B6;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.container8 .footer {
+  height: 10%;
+  background: #E74C3C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .container8 {
+    height: 700px;
+    width: 200px;
+  }
+
+  .container8 .header {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .container8 .main {
+    flex-direction: column;
+  }
+
+  .container8 .main .navbar {
+    max-width: 100%;
+    width: 100%;
+    order: 2;
+  }
+
+  .container8 .main .article {
+    width: 100%;
+    height: 100%;
+    order: 1;
+  }
+}
